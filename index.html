@@ -4,71 +4,198 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Tech Sunlight</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f2f5f9}
-header{background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);color:white;padding:30px;text-align:center}
-header h1{margin:0;font-size:36px}
-nav{background:#111;padding:12px;text-align:center}
-nav a{color:white;margin:0 12px;text-decoration:none;font-size:16px}
-nav a:hover{color:#00e0ff}
-.container{max-width:1100px;margin:auto;padding:20px}
-.card{background:white;border-radius:12px;padding:20px;margin-bottom:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
-.card h2{margin-top:0}
-iframe{width:100%;height:380px;border:none;border-radius:10px;margin-top:10px}
-.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.tech-box{background:white;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
-footer{background:#0c0c0c;color:#aaa;text-align:center;padding:20px;margin-top:40px}
+*{box-sizing:border-box}
+body{font-family:Poppins,Arial,Helvetica,sans-serif;margin:0;background:#f4f7fb;color:#222}
+
+header{
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+padding:40px 20px;
+text-align:center
+}
+
+header h1{margin:0;font-size:38px;letter-spacing:1px}
+header p{opacity:.9;margin-top:6px}
+
+nav{
+background:#0c0c0c;
+padding:12px;
+text-align:center;
+position:sticky;
+top:0
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-size:15px;
+font-weight:500
+}
+
+nav a:hover{color:#00eaff}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:25px
+}
+
+.section-title{
+font-size:26px;
+margin-bottom:15px
+}
+
+.card{
+background:white;
+padding:22px;
+border-radius:14px;
+margin-bottom:30px;
+box-shadow:0 8px 22px rgba(0,0,0,.08)
+}
+
+iframe{
+width:100%;
+height:420px;
+border:none;
+border-radius:10px;
+margin-top:10px
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+
+.blog-card{
+background:white;
+padding:18px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,.07);
+transition:.25s
+}
+
+.blog-card:hover{
+transform:translateY(-6px)
+}
+
+.blog-card h3{margin-top:0}
+
+.btn{
+display:inline-block;
+background:#0d6efd;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+margin-top:10px
+}
+
+.btn:hover{background:#094ec2}
+
+.channel-box{
+background:#0f172a;
+color:white;
+padding:30px;
+border-radius:14px;
+text-align:center
+}
+
+.channel-box a{
+color:#00eaff;
+text-decoration:none;
+font-weight:600
+}
+
+footer{
+margin-top:50px;
+background:#050505;
+color:#aaa;
+padding:22px;
+text-align:center;
+font-size:14px
+}
+
+@media(max-width:700px){
+iframe{height:260px}
+header h1{font-size:30px}
+}
 </style>
 </head>
 <body>
 
 <header>
-<h1>Tech Sunlight</h1>
-<p>Tech Reviews • Tutorials • YouTube Videos</p>
+<div style="display:flex;align-items:center;justify-content:flex-start;gap:15px;max-width:1150px;margin:auto;">
+
+<!-- Logo: you can upload logo.png later -->
+<img src="logo.png" alt="Tech Sunlight Logo" style="width:60px;height:60px;border-radius:8px;object-fit:cover;">
+
+<div>
+<h1 style="margin:0;font-size:32px;">Tech Sunlight</h1>
+<p style="margin:0;font-size:14px;opacity:.9;">Tech Reviews • Tutorials • YouTube Videos</p>
+</div>
+
+</div>
 </header>
 
 <nav>
-<a href="#">Home</a>
+<a href="#home">Home</a>
 <a href="#videos">Videos</a>
-<a href="#articles">Articles</a>
-<a href="#contact">Contact</a>
+<a href="#blog">Tech Blog</a>
+<a href="#channel">YouTube</a>
 </nav>
 
 <div class="container">
 
-<div class="card" id="videos">
-<h2>Latest YouTube Video</h2>
-<p>Replace the video link below with your own YouTube embed link.</p>
+<section id="videos" class="card">
+<h2 class="section-title">Latest Video</h2>
+<p>Replace the video below with your YouTube video embed link.</p>
 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-</div>
+</section>
 
-<div class="card" id="articles">
-<h2>Latest Tech Posts</h2>
-<div class="tech-grid">
+<section id="blog">
+<h2 class="section-title">Latest Tech Articles</h2>
 
-<div class="tech-box">
-<h3>Best Budget Vlogging Tripod</h3>
-<p>Digitek DTR‑200 MT mini tripod is great for beginners who want to start vlogging.</p>
-</div>
+<div class="blog-grid">
 
-<div class="tech-box">
+<div class="blog-card">
 <h3>iQOO Z3 5G Review</h3>
-<p>Full performance test, camera samples and gaming review.</p>
+<p>Full smartphone review including camera test, gaming performance and battery life.</p>
+<a class="btn" href="#">Read More</a>
 </div>
 
-<div class="tech-box">
-<h3>Top 5 Free Video Editing Apps</h3>
-<p>Best apps for Android creators and YouTubers.</p>
+<div class="blog-card">
+<h3>Best Budget Tripod For Vlogging</h3>
+<p>Digitek DTR‑200 MT mini tripod unboxing and performance test for creators.</p>
+<a class="btn" href="#">Read More</a>
+</div>
+
+<div class="blog-card">
+<h3>Top 5 Free Editing Apps</h3>
+<p>Best Android video editing apps for YouTubers and content creators.</p>
+<a class="btn" href="#">Read More</a>
+</div>
+
+<div class="blog-card">
+<h3>Best Budget Mic For YouTube</h3>
+<p>Affordable microphones for YouTube creators and vloggers.</p>
+<a class="btn" href="#">Read More</a>
 </div>
 
 </div>
-</div>
+</section>
 
-<div class="card" id="contact">
-<h2>Contact / Channel</h2>
-<p>YouTube: Add your channel link here</p>
-<p>Email: yourmail@example.com</p>
+<section id="channel" class="card">
+<div class="channel-box">
+<h2>Visit Our YouTube Channel</h2>
+<p>Subscribe to Tech Sunlight for reviews, tech tips and tutorials.</p>
+<p><a href="#">Open YouTube Channel</a></p>
 </div>
+</section>
 
 </div>
 
